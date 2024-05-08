@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {},
 },
+  darkMode: false,
+
 
 
   plugins: [require("tw-elements-react/dist/plugin.cjs")],
