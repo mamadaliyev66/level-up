@@ -40,6 +40,7 @@ export default function Course() {
       const courseRef = doc(collection(firestore, 'regular_courses'), courseId);
       const courseSnapshot = await getDoc(courseRef);
     
+       setTimeout(() => {
       if (courseSnapshot.exists) {
         const fetchedData = {
           id: courseSnapshot.id,
@@ -50,6 +51,7 @@ export default function Course() {
       } else {
         console.error("Course document not found");
       }
+    }, 5000);
     };
     
  
